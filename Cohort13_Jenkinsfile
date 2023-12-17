@@ -44,7 +44,7 @@ pipeline {
       steps{
         script {
           if (env.DEPLOY_ENV == 'staging'){
-          deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://52.15.105.223:7000/')], contextPath: null, war: 'target/*.war'
+          deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://18.224.69.123:7000/')], contextPath: null, war: 'target/*.war'
           }
           else if (env.DEPLOY_ENV == 'production'){
             echo 'Deploying to production tomcat'
